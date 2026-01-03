@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="pretty.css">
+  </head>
+    <body>
+      <form id="damage_form">
+        <label for="physical_damage">Physical damage</label><br>
+        <input id="physical_damage" type="number" required><br><br>
+        <label for="armor">Armor</label><br>
+        <input id="armor" type="number" required><br><br>
+        <label for="lethality">Lethality</label><br>
+        <input id="lethality" type="number" required><br><br>
+        <label for="penetration">Armor penetration</label><br>
+        <input id="penetration" type="number" required><br><br>
+        <label for="amp">Damage amp</label><br>
+        <input id="amp" type="number" required><br><br>
+        <button type="submit">Calculate</button>
+      </form>
+
+      <p id="result"></p>
+
+    <script type="module" src="./main.js"></script>
+    </body>
+</html>
