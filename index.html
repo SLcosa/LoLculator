@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>LoLculator</title>
     <link rel="stylesheet" href="pretty.css">
+    <link rel="icon" type="image/png" href="./icon.ico">
   </head>
     <body>
-      <form id="damage_form">
-        <label for="physical_damage">Physical damage</label><br>
-        <input id="physical_damage" type="number" required><br><br>
-        <label for="armor">Armor</label><br>
-        <input id="armor" type="number" required><br><br>
-        <label for="lethality">Lethality</label><br>
-        <input id="lethality" type="number" required><br><br>
-        <label for="penetration">Armor penetration</label><br>
-        <input id="penetration" type="number" required><br><br>
-        <label for="amp">Damage amp</label><br>
-        <input id="amp" type="number" required><br><br>
-        <button type="submit">Calculate</button>
-      </form>
+      <img src="lolculator_logo_2_cut.png">
+      <div class="display_flex">
+        <div class="border">
+          <form id="your_stats_form">
+            <label for="amp">Damage amp</label><br>
+            <input id="amp" type="number"><br><br>
+            <label for="physical_damage">Physical damage</label><br>
+            <input id="physical_damage" type="number"><br><br>
+            <label for="lethality">Lethality</label><br>
+            <input id="lethality" type="number"><br><br>
+            <label for="penetration">Armor penetration</label><br>
+            <input id="penetration" type="number"><br><br>
+            <label for="magic_damage">Magic damage</label><br>
+            <input id="magic_damage" type="number"><br><br>
+            <label for="flat_magic_pen">Flat magic penetration</label><br>
+            <input id="flat_magic_pen" type="number"><br><br>
+            <label for="percentage_magic_pen">Percentage magic<br>penetration</label><br>
+            <input id="percentage_magic_pen" type="number"><br><br>
+            <label for="true_damage">True damage</label><br>
+            <input id="true_damage" type="number"><br><br>
+          </form>
+        </div>
 
-      <p id="result"></p>
-
+        <div class="border">
+        <form id="enemy_stats_form">
+          <label for="armor">Armor</label><br>
+          <input id="armor" type="number"><br><br>
+          <label for="magic_resists">Magic resists</label><br>
+          <input id="magic_resists" type="number"><br><br>
+          <label for="damage_reduction">Damage reduction</label><br>
+          <input id="damage_reduction" type="number"><br><br>
+        </form>
+        </div>
+      </div>
+      <div class="result">
+        <p id="damage_result_text"></p>
+      </div>
+      <div class="center">
+        <button id="calculate" type="button">Calculate</button>
+      </div>
+      <div class="note">
+        Numbers are rounded to two decimals places<br>
+        Durability is calculted after AMP<br>
+        If no values are entered they'll be interpreted as zeros
+      </div>
     <script type="module" src="./main.js"></script>
     </body>
 </html>
