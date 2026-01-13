@@ -1,0 +1,15 @@
+{
+  "name": "lolculator",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "lolculator_bg.wasm",
+    "lolculator.js",
+    "lolculator.d.ts"
+  ],
+  "main": "lolculator.js",
+  "types": "lolculator.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
